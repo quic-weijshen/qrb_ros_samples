@@ -1,3 +1,7 @@
+# Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+
 # Copyright 2015 Open Source Robotics Foundation, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,14 +16,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from ament_copyright.main import main
+from ament_pep257.main import main
 import pytest
 
 
-# Remove the `skip` decorator once the source file(s) have a copyright header
-@pytest.mark.skip(reason='No copyright header has been placed in the generated source file.')
-@pytest.mark.copyright
 @pytest.mark.linter
-def test_copyright():
+@pytest.mark.pep257
+def test_pep257():
     rc = main(argv=['.', 'test'])
-    assert rc == 0, 'Found errors'
+    assert rc == 0, 'Found code style errors / warnings'
