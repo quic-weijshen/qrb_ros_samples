@@ -67,5 +67,7 @@ scp -r install/sample_resnet101_quantized/* root@10.92.129.14:/usr
 ```bash
 (ssh) /usr/share/qirp-setup.sh
 (ssh) ros2 launch sample_resnet101_quantized  launch_with_image_publisher.py
+ or
+(ssh) ros2 launch sample_resnet101_quantized  launch_with_image_publisher.py image_path:=/usr/share/sample_resnet101_quantized/cup.jpg
 ```
 
