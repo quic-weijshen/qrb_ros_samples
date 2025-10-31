@@ -4,7 +4,7 @@
   <h1>AI Samples Object Detection	</h1>
   <p align="center">
 </div>
-<img src="./resource/yolo-detect.gif" style="zoom:80%;" />
+<img src="https://github.com/qualcomm-qrb-ros/qrb_ros_samples/blob/gif/ai_vision/sample_hrnet_pose_estimation/resource/result_image.gif" style="zoom:80%;" />
 
 ---
 
@@ -160,7 +160,7 @@ root@qcs8300-ride-sx:/root# ros2 launch sample_object_detection launch_with_qrb_
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/yolo_preprocess_node' in container '/yolo_node_container'
 ```
 
-Then you can check ROS topics with the name`/yolo_detect_overlay` in  rvize
+Then you can check ROS topics with the name`/yolo_detect_overlay` in  rviz2
 
 </details>
 

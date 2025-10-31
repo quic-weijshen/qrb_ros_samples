@@ -4,7 +4,7 @@
   <h1>AI Samples Object Segmentation</h1>
   <p align="center">
 </div>
-<img src="./resource/yolo-segment.gif" style="zoom:80%;" />
+<img src="https://github.com/qualcomm-qrb-ros/qrb_ros_samples/blob/gif/ai_vision/sample_object_segmentation/resource/yolo-segment.gif" style="zoom:80%;" />
 
 ---
 
@@ -166,7 +166,7 @@ root@qcs8300-ride-sx:/root# ros2 launch sample_object_segmentation launch_with_q
 
 ```
 
-Then you can check ROS topics with the name`/yolo_segment_overlay` in  rvize
+Then you can check ROS topics with the name`/yolo_segment_overlay` in  rviz2
 
 </details>
 

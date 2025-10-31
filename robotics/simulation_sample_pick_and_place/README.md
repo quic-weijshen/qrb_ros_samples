@@ -4,7 +4,7 @@
   <h1>Simulation Sample Pick and Place</h1>
 </div>
 
-![](./resource/pick_and_place.gif)
+![](https://github.com/qualcomm-qrb-ros/qrb_ros_samples/blob/gif/robotics/simulation_sample_pick_and_place/resource/pick_and_place.gif)
 
 ---
 
@@ -106,7 +106,7 @@ ros2 launch qrb_ros_sim_gazebo gazebo_rml_63_gripper.launch.py world_model:=ware
 source install/setup.bash
 export ROS_DOMAIN_ID=55
 ros2 launch qrb_ros_sim_gazebo gazebo_rml_63_gripper_load_controller.launch.py
-``` 
+```
 
 - After Gazebo starts in the host Docker container, run the pick-and-place node on the device.
 
@@ -149,7 +149,19 @@ ros2 run simulation_sample_pick_and_place qrb_ros_arm_pick_place
 
 1. Launch simulation environment on the HOST.
 
-- If you launch the simulation on a different host, use the same `ROS_DOMAIN_ID` to ensure devices can communicate via ROS.
+- Install ROS dependencies:
+```bash
+sudo apt update
+sudo apt-get install -y qcom-adreno-dev
+sudo apt install -y ros-jazzy-moveit
+sudo apt install -y ros-dev-tools
+sudo rosdep init
+rosdep update
+```
+
+2. Launch Gazebo on the host Docker container
+
+- Please refer to the Quick Start of [QRB ROS Simulation](https://github.com/qualcomm-qrb-ros/qrb_ros_simulation) to launch `QRB Robot ARM` on the host. Use the same local network and `ROS_DOMAIN_ID` to ensure devices can communicate via ROS.
 
 - You can launch Gazebo with the following command:
 ```bash
@@ -163,7 +175,7 @@ ros2 launch qrb_ros_sim_gazebo gazebo_rml_63_gripper.launch.py world_model:=ware
 source install/setup.bash
 export ROS_DOMAIN_ID=55
 ros2 launch qrb_ros_sim_gazebo gazebo_rml_63_gripper_load_controller.launch.py
-``` 
+```
 
 - After Gazebo starts in the host Docker container, you can run the pick-and-place node on the device.
 
